@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+<div class="row">
+  {% for cafe in cafes %}
+  <div class="col">
+       <div class="card" style="width: 18rem;">
+            <img src="{{cafe.imagen_red}}" class="card-img-top" alt="{{cafe.nombre}}">
+            <div class="card-body">
+                <h5 class="card-title">{{cafe.nombre}}</h5>
+                <p class="card-text">{{cafe.precio}}</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito pendiente</a>
+            </div>
+        </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
